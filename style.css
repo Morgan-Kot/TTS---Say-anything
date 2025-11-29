@@ -1,0 +1,125 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(130deg, #01379b, #02b7ff);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    background: rgba(0,0,0,0.6);
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 83px rgba(0,0,0,0.5);
+    text-align: center;
+    width: 90%;
+    max-width: 600px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container::selection{
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+
+
+/* Title */
+h1 {
+    margin-bottom: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+    /* Gradient animation */
+    background: linear-gradient(to right, #01379b, #02b7ff, #01379b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% auto;
+
+    /* Animations */
+    animation: animate-gradient 5.5s linear infinite;
+}
+
+/* Gradient animation keyframes */
+@keyframes animate-gradient {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+/* Textarea */
+textarea {
+    width: 100%;
+    height: 100px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    resize: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+textarea:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 20px rgba(170, 155, 155, 0.7);
+}
+
+textarea:active {
+    transform: scale(0.96);
+}
+
+/* Buttons */
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ff6b6b, #f06595);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+button:active {
+    transform: translateY(1px);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes slideIn {
+    from {transform: translateY(-20px); opacity: 0;}
+    to {transform: translateY(0); opacity: 1;}
+}
